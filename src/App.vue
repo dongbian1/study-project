@@ -1,0 +1,87 @@
+<template>
+  <div class="master">
+    <div class="left">
+      <div 
+        :class="`module ${item.key === selectData?.key ? 'select' : ''}`" 
+        v-for="item in data" 
+        :key="item.key" 
+        @click="moduleClick(item)"
+      >
+        {{ item.name }}
+      </div>
+    </div>
+    <div class="right">
+      <component :is="selectData?.component" />
+    </div>
+  </div>
+</template>
+<script setup lang="ts">
+
+interface Data {
+  key: string;
+  name: string;
+  component: any
+}
+
+const data = shallowRef<Data[]>([
+  { key: 'model',name: '模态框', component: defineAsyncComponent(() => import('@/page/model.vue')) },
+  { key: 'loading', name: '全局loading', component: defineAsyncComponent(() => import('@/page/loading.vue')) },
+  { key: 'directives', name: '自定义指令', component: defineAsyncComponent(() => import('@/page/directives.vue')) },
+  { key: 'mxgraphCell', name: 'mxGraph图片节点', component: defineAsyncComponent(() => import('@/page/mxGraphCell.vue')) },
+  { key: 'mxgraphXML', name: 'mxGraph XML', component: defineAsyncComponent(() => import('@/page/mxGraphXML.vue')) },
+  { key: 'mxGraphLabel', name: 'mxGraph标签', component: defineAsyncComponent(() => import('@/page/mxGraphLabel.vue')) },
+])
+
+const selectData = shallowRef<Data>();
+
+const moduleClick = (item: Data) => {
+  selectData.value = item
+}
+</script>
+
+<style scoped lang="scss">
+.master {
+  padding: 10px;
+  display: flex;
+  height: calc(100vh);
+  justify-items: center;
+  justify-content: space-between;
+  .left,.right {
+    height: 100%;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+  }
+  .left {
+    width: 200px;
+    .module {
+      width: 100%;
+      height: 50px;
+      padding: 10px;
+      border-bottom: 1px solid #ccc;
+      cursor: pointer;
+      &:first-child{
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px
+      }
+      &:hover {
+        background-color: #ccc;
+      }
+    }
+  }
+  .right {
+    width: calc(100% - 200px - 20px);
+  }
+
+  .select {
+    color: #fff;
+    background-color: var(--td-brand-color-8);
+    &:first-child{
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px
+    }
+    &:hover {
+      background-color: var(--td-brand-color-8) !important;
+    }
+  }
+}
+</style>
