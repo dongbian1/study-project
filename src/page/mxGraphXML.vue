@@ -36,7 +36,7 @@ const build = (container: HTMLDivElement) => {
 
 const setXml = async () => {
     try {
-        const response  = await fetch('../../public/mxgraph-base/xml/mxGraph.xml')
+        const response  = await fetch('../../public/mxgraph-base/xml/umlLifeline.xml')
         const xml = await response.text()
         const doc = mxUtils.parseXml(xml);
         const codec = new mxCodec(doc);
