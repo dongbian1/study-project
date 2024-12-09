@@ -34,8 +34,8 @@ const build = (container: HTMLDivElement) => {
 
     graph.getModel().beginUpdate();
     try {
-        graph.insertVertex(parent, null, '我是1号泳道', 60, 60, 200, 360,'shape=swimlane;');
-        graph.insertVertex(parent, null, '我是2号泳道', 360, 360, 200, 360,'shape=swimlane;');
+        graph.insertVertex(parent, null, '我是1号泳道', 60, 60, 200, 360,'shape=swimlane;rounded=0;');
+        graph.insertVertex(parent, null, '我是2号泳道', 360, 360, 200, 360,'shape=swimlane;rounded=1;');
         graph.insertVertex(parent, null, '我是模块', 0, 0, 50, 50);
     }
     finally {

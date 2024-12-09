@@ -27,7 +27,7 @@ const build = (container: HTMLDivElement) => {
     graph.getModel().beginUpdate();
     try {
         graph.insertVertex(parent, null, 'Bottom', 60, 60, 60, 60,
-            prefix + 'verticalLabelPosition=bottom;verticalAlign=top');
+            prefix + 'verticalLabelPosition=bottom;verticalAlign=top;rounded=0;fontWeight=bold;');
         graph.insertVertex(parent, null, 'Top', 140, 60, 60, 60,
             prefix + 'verticalLabelPosition=top;verticalAlign=bottom');
         graph.insertVertex(parent, null, 'Left', 60, 160, 60, 60,

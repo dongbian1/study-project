@@ -37,13 +37,19 @@ const rander = () => {
     requestAnimationFrame(rander)
 }
 
+const mouseTailInit = (v: MouseEvent) => {
+    // 创建元素
+    const e = new MouseTail({ characters: characters.value, colors: colors.value })
+    e.init(v.clientX, v.clientY)
+    elementGroup.value.push(e)
+}
+
 onMounted(() => {
     rander()
-    document.addEventListener("mousemove", (v: MouseEvent) => {
-        // 创建元素
-        const e = new MouseTail({ characters: characters.value, colors: colors.value })
-        e.init(v.clientX, v.clientY)
-        elementGroup.value.push(e)
-    })
+    document.addEventListener("mousemove", mouseTailInit)
+})
+
+onUnmounted(() => {
+    document.removeEventListener("mousemove", mouseTailInit)
 })
 </script>

@@ -38,9 +38,11 @@ const build = (container: HTMLDivElement) => {
 
     const parent = newGraph.getDefaultParent();
     newGraph.getModel().beginUpdate();
-
+		// style.fontWeight = 'bold';
+		// style.fontStyle = 'italic';
+		// style.textDecoration = 'underline';
     try {
-        const start = newGraph.insertVertex(parent, null, "开始我是一个很长很长很长很长很长很长很长很长的名字", 200, 20, 80, 30, 'start');
+        const start = newGraph.insertVertex(parent, null, "开始我是一个很长很长很长很长很长很长很长很长的名字", 200, 20, 80, 30, 'start;fontStyle=7;');
         const end = newGraph.insertVertex(parent, null, "结束", 200, 400, 80, 30, 'end');
         newGraph.insertEdge(parent, null, "我是一个很长很长很长很长很长很长很长很长的名字", start, end);
 
