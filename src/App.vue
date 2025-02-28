@@ -31,12 +31,13 @@ const data = shallowRef<Data[]>([
   { key: 'deepCopy', name: '手写深拷贝', component: defineAsyncComponent(() => import('@/page/deepCopy.vue')) },
   { key: 'promise', name: '手写Promise', component: defineAsyncComponent(() => import('@/page/MyPromise.vue')) },
   { key: 'mouseTail', name: '鼠标拖尾特效', component: defineAsyncComponent(() => import('@/page/mouseTail.vue')) },
+  { key: 'Im', name: 'IM实时通信', component: defineAsyncComponent(() => import('@/page/im.vue')) },
   { key: 'tsFrontMark', name: '前置的不定量参数类型', component: defineAsyncComponent(() => import('@/page/ts/tsFrontMark.vue')) },
-  { key: 'mxgraphCell', name: 'mxGraph图片节点', component: defineAsyncComponent(() => import('@/page/mxGraphCell.vue')) },
-  { key: 'mxgraphXML', name: 'mxGraph XML', component: defineAsyncComponent(() => import('@/page/mxGraphXML.vue')) },
-  { key: 'mxGraphLabel', name: 'mxGraph标签', component: defineAsyncComponent(() => import('@/page/mxGraphLabel.vue')) },
-  { key: 'mxGraphSwimlanes', name: 'mxGraph泳道图', component: defineAsyncComponent(() => import('@/page/mxGraphSwimlanes.vue')) },
-  { key: 'mxGraphUmlLifeline', name: 'mxGraph时序图', component: defineAsyncComponent(() => import('@/page/umlLifeline.vue')) },
+  { key: 'mxgraphCell', name: 'mxGraph图片节点', component: defineAsyncComponent(() => import('@/page/mxGraph/mxGraphCell.vue')) },
+  { key: 'mxgraphXML', name: 'mxGraph XML', component: defineAsyncComponent(() => import('@/page/mxGraph/mxGraphXML.vue')) },
+  { key: 'mxGraphLabel', name: 'mxGraph标签', component: defineAsyncComponent(() => import('@/page/mxGraph/mxGraphLabel.vue')) },
+  { key: 'mxGraphSwimlanes', name: 'mxGraph泳道图', component: defineAsyncComponent(() => import('@/page/mxGraph/mxGraphSwimlanes.vue')) },
+  { key: 'mxGraphUmlLifeline', name: 'mxGraph时序图', component: defineAsyncComponent(() => import('@/page/mxGraph/umlLifeline.vue')) },
 ])
 
 const selectData = shallowRef<Data>();
