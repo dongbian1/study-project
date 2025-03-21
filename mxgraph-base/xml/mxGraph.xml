@@ -1,0 +1,56 @@
+<mxGraphModel>
+    <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="2" value="Inte1l 1" parent="1" vertex="1">
+            <mxGeometry x="880" y="200" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="3" value="Interval 2" parent="1" vertex="1">
+            <mxGeometry x="700" y="280" width="380" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="4" value="Interval 3" parent="1" vertex="1">
+            <mxGeometry x="540" y="340" width="260" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="5" value="Interval 4" parent="1" vertex="1">
+            <mxGeometry x="620" y="400" width="240" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="6" value="Interval 5" parent="1" vertex="1">
+            <mxGeometry x="920" y="460" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="7" value="Transfer1" parent="1" source="2" target="3" edge="1">
+            <mxGeometry x="500" y="200" as="geometry">
+                <Array as="points">
+                    <Object x="920" y="260" />
+                </Array>
+            </mxGeometry>
+        </mxCell>
+        <mxCell id="8" value="" parent="1" source="2" target="6" edge="1">
+            <mxGeometry y="-30" relative="1" as="geometry">
+                <Array as="points">
+                    <Object x="1100" y="260" />
+                </Array>
+            </mxGeometry>
+        </mxCell>
+        <mxCell id="9" value="Transfer3" parent="1" source="3" target="4" edge="1">
+            <mxGeometry x="500" y="200" as="geometry">
+                <Array as="points">
+                    <Object x="760" y="320" />
+                </Array>
+            </mxGeometry>
+        </mxCell>
+        <mxCell id="10" value="Transfer4" parent="1" source="4" target="5" edge="1">
+            <mxGeometry x="500" y="200" as="geometry">
+                <Array as="points">
+                    <Object x="700" y="380" />
+                </Array>
+            </mxGeometry>
+        </mxCell>
+        <mxCell id="11" value="Transfer5" parent="1" source="4" target="6" edge="1">
+            <mxGeometry y="-10" relative="1" as="geometry">
+                <Array as="points">
+                    <Object x="960" y="355" />
+                </Array>
+            </mxGeometry>
+        </mxCell>
+    </root>
+</mxGraphModel>
