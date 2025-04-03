@@ -7,7 +7,7 @@ import AutoImport from 'unplugin-auto-import/vite'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: '/study-project',
+  // base: '/study-project',
   plugins: [
     vue(),
     WindiCSS(),
@@ -22,5 +22,16 @@ export default defineConfig({
   },
   server: {
     port: 3000,
+  },
+  build: {
+    target: 'ES2022',
+    rollupOptions: {
+      output: {
+        format: 'es'
+      }
+    }
+  },
+  worker: {
+    format: 'es'
   }
 })

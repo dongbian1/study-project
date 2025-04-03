@@ -38,6 +38,7 @@ const data = shallowRef<Data[]>([
   { key: 'mxGraphLabel', name: 'mxGraph标签', component: defineAsyncComponent(() => import('@/page/mxGraph/mxGraphLabel.vue')) },
   { key: 'mxGraphSwimlanes', name: 'mxGraph泳道图', component: defineAsyncComponent(() => import('@/page/mxGraph/mxGraphSwimlanes.vue')) },
   { key: 'mxGraphUmlLifeline', name: 'mxGraph时序图', component: defineAsyncComponent(() => import('@/page/mxGraph/umlLifeline.vue')) },
+  { key: 'MonacoEditor', name: 'MonacoEditor编辑器', component: defineAsyncComponent(() => import('@/page/monacoEditor.vue')) },
 ])
 
 const selectData = shallowRef<Data>();
