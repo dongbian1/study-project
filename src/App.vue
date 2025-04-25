@@ -39,6 +39,8 @@ const data = shallowRef<Data[]>([
   { key: 'mxGraphSwimlanes', name: 'mxGraph泳道图', component: defineAsyncComponent(() => import('@/page/mxGraph/mxGraphSwimlanes.vue')) },
   { key: 'mxGraphUmlLifeline', name: 'mxGraph时序图', component: defineAsyncComponent(() => import('@/page/mxGraph/umlLifeline.vue')) },
   { key: 'MonacoEditor', name: 'MonacoEditor编辑器', component: defineAsyncComponent(() => import('@/page/monacoEditor.vue')) },
+  { key: 'G6Tree', name: 'G6树图', component: defineAsyncComponent(() => import('@/page/g6-tree/index.vue')) },
+  { key: 'G6Tree-node', name: 'G6树图', component: defineAsyncComponent(() => import('@/page/G6/index.vue')) },
 ])
 
 const selectData = shallowRef<Data>();

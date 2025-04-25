@@ -5,11 +5,14 @@ import vue from '@vitejs/plugin-vue'
 import WindiCSS from 'vite-plugin-windicss'
 import AutoImport from 'unplugin-auto-import/vite'
 
+import vueJsx from "@vitejs/plugin-vue-jsx"
+
 // https://vitejs.dev/config/
 export default defineConfig({
   // base: '/study-project',
   plugins: [
     vue(),
+    vueJsx(),
     WindiCSS(),
     AutoImport({
     imports: ['vue', 'vue-router'],

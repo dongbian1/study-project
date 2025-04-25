@@ -114,7 +114,7 @@ export const useMonacoEditor = (url: string) => {
 
       // 注册自定义补全提供者
       if (editorOptions.completionKeywords) {
-        registerCustomCompletion('python', editorOptions.completionKeywords);
+        registerCustomCompletion(editorOptions.language || 'python', editorOptions.completionKeywords);
       }
 
       // 编辑器内容变化时回调
